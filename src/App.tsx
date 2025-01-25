@@ -6,8 +6,6 @@ import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
-import { Platform } from "./hooks/usePlatforms";
-import { Genre } from "./hooks/useGenres";
 
 export interface GameQuery {
   genreId?: number;
@@ -51,9 +49,9 @@ function App() {
           <Flex marginBottom={5}>
             <Box marginRight={5}>
               <PlatformSelector
-                selectedPlatformId={gameQuery.platformId}
+                selectedPlatform={gameQuery.platformId}
                 onSelectPlatform={(platform) =>
-                  setGameQuery({ ...gameQuery, platformId: platform.id })
+                  setGameQuery({ ...gameQuery, platformId: platform })
                 }
               />
             </Box>
