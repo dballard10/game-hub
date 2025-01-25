@@ -32,7 +32,7 @@ const useGames = (gameQuery: GameQuery) =>
     },
     initialPageParam: 1,
     staleTime: 24 * 60 * 60 * 1000, // 24 hours
-    //initialData: { count: games.length, results: games },
+    //initialData: { count: games.length, results: games, next: null },
   });
 
 export default useGames;
